@@ -14,7 +14,10 @@ let package = Package(
     .library(name: "XCTestDynamicOverlay", targets: ["XCTestDynamicOverlay"])
   ],
   targets: [
-    .target(name: "XCTestDynamicOverlay"),
+    .target(
+      name: "XCTestDynamicOverlay",
+      exclude: "Documentation.docc"
+    ),
     .testTarget(
       name: "XCTestDynamicOverlayTests",
       dependencies: ["XCTestDynamicOverlay"]
